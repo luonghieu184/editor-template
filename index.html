@@ -783,7 +783,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <textarea rows="25" cols="150" class="form-control"></textarea>
+            <textarea rows="25" cols="150" class="form-control" id="evHTML"></textarea>
           </div>
           <div class="text-center border border-light p-5" action="#!">
             <p class="h4 mb-4">CREATE EVENT TEMPLATE</p>
@@ -798,12 +798,13 @@
           </div>
         </div>
       </div>
+      <script src="js/jquery.min.js"></script>
       <script type="text/javascript">
 
         $("#createEventHTML").click(function() {
           var evTitle = $("#evTitle").val();
           var evDescription = $("#evDescription").val();
-          var evTemplateHTML = Vvveb.Builder.getHtml();
+          var evTemplateHTML = $("#textarea#evHTML").val();
 
 
           var formData = new FormData();
