@@ -791,7 +791,7 @@
             <div class="form-group">
               <input class="form-control rounded-0" id="evDescription" name="evDescription" rows="3" placeholder="Nội dung mô tả">
             </div>
-            <button class="btn btn-info btn-block" type="submit" onclick="createEvent();">CREATE NOW</button>
+            <button class="btn btn-info btn-block" type="submit" id="createEventHTML">CREATE NOW</button>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal"><i class="la la-close"></i> Close</button>
@@ -799,7 +799,8 @@
         </div>
       </div>
       <script type="text/javascript">
-        function createEvent() {
+
+        $("#createEventHTML").click(function() {
           var evTitle = $("#evTitle").val();
           var evDescription = $("#evDescription").val();
           var evTemplateHTML = Vvveb.Builder.getHtml();
@@ -822,7 +823,7 @@
 
             }
           });
-        }
+        });
       </script>
     </div>
 
